@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic RAG Chat Interface</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">Agentic RAG Chat Interface</h1>
+                <p class="subtitle">Test both Custom Workflow and React agents with intelligent document retrieval</p>
+            </div>
+            
+            <!-- Agent Toggle -->
+            <div class="agent-toggle">
+                <label class="toggle-label">Choose Agent:</label>
+                <div class="toggle-container">
+                    <input type="radio" id="custom-agent" name="agent" value="custom" checked>
+                    <label for="custom-agent" class="toggle-option">
+                        <span class="toggle-icon">⚡</span>
+                        <span class="toggle-text">Custom Workflow</span>
+                        <span class="toggle-desc">Fast & Structured</span>
+                    </label>
+                    
+                    <input type="radio" id="react-agent" name="agent" value="react">
+                    <label for="react-agent" class="toggle-option">
+                        <span class="toggle-icon">🤖</span>
+                        <span class="toggle-text">React Agent</span>
+                        <span class="toggle-desc">Flexible & Autonomous</span>
+                    </label>
+                </div>
+            </div>
+        </header>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <!-- Welcome Message -->
+                <div class="message assistant-message">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <div class="message-text">
+                            Welcome! I'm your Agentic RAG assistant. I can help you with company-specific queries by intelligently searching for relevant documents or using general knowledge. 
+                            
+                            <div class="example-queries">
+                                <h4>Try these example queries:</h4>
+                                <button class="example-btn" onclick="setQuery('Generate a PRD draft for Adobe Photoshop homepage redesign using recent design best practices')">Adobe Photoshop PRD</button>
+                                <button class="example-btn" onclick="setQuery('How to configure Universal Editor for AEM development environment?')">AEM Universal Editor</button>
+                                <button class="example-btn" onclick="setQuery('Create a brand guidelines document for Microsoft Teams redesign')">Microsoft Teams Guidelines</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput" 
+                        placeholder="Ask me anything about company-specific documents, brand guidelines, or general business questions..."
+                        rows="1"></textarea>
+                    <button id="sendButton" class="send-button" onclick="sendMessage()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13"></path>
+                            <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="input-footer">
+                    <span class="agent-indicator" id="agentIndicator">Using Custom Workflow Agent</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Indicator -->
+        <div class="status-indicator" id="statusIndicator">
+            <div class="status-dot"></div>
+            <span>Ready</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

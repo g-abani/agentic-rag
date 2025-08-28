@@ -1,0 +1,46 @@
+{
+  "_note": "This file contains sample document structures for reference. The actual application now requires real Azure AI Search index with documents.",
+  "sampleDocuments": [
+    {
+      "id": "doc-001",
+      "title": "Modern UX Design Principles 2024",
+      "content": "Modern user experience design in 2024 emphasizes accessibility, mobile-first design, micro-interactions, and sustainable design practices. Key principles include: 1) Inclusive design for all users, 2) Performance optimization for faster loading, 3) Voice user interfaces integration, 4) Dark mode support, 5) Gesture-based navigation. Best practices for homepage design include hero sections with clear value propositions, progressive disclosure of information, social proof elements, and conversion-focused call-to-action buttons.",
+      "category": "UX Design",
+      "lastModified": "2024-01-15T10:30:00Z",
+      "url": "https://example.com/ux-principles-2024"
+    },
+    {
+      "id": "doc-002", 
+      "title": "Adobe Photoshop Product Strategy Guide",
+      "content": "Adobe Photoshop remains the industry standard for image editing and creative design. Key strategic initiatives include: AI-powered content creation tools, cloud collaboration features, mobile app integration, subscription model optimization, and creative community building. The product roadmap focuses on generative AI capabilities, real-time collaboration, and seamless cross-device workflows.",
+      "category": "Product Strategy",
+      "lastModified": "2023-11-20T14:15:00Z",
+      "url": "https://example.com/photoshop-strategy"
+    },
+    {
+      "id": "doc-003",
+      "title": "Homepage Redesign Best Practices",
+      "content": "Effective homepage redesigns follow these principles: clear value proposition above the fold, intuitive navigation structure, social proof and testimonials, mobile-responsive design, fast loading times, A/B testing for optimization, and conversion funnel analysis. Case studies show that simplified designs with focused messaging increase conversion rates by 25-40%.",
+      "category": "Web Design",
+      "lastModified": "2024-01-08T09:45:00Z", 
+      "url": "https://example.com/homepage-redesign"
+    }
+  ],
+  "searchQueries": [
+    {
+      "query": "modern UX design principles 2024",
+      "intent": "Find current design trends and best practices",
+      "expectedResults": ["doc-001", "doc-003"]
+    },
+    {
+      "query": "Adobe Photoshop homepage redesign",
+      "intent": "Specific product redesign guidance",
+      "expectedResults": ["doc-002", "doc-003", "doc-001"]
+    },
+    {
+      "query": "product requirements document template",
+      "intent": "PRD structure and format guidance",
+      "expectedResults": ["doc-002"]
+    }
+  ]
+}

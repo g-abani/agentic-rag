@@ -1,0 +1,58 @@
+{
+    "name": "agentic-rag-poc",
+    "version": "2.0.0",
+    "type": "module",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.js",
+        "dev": "node --watch src/index.js",
+        "test": "node src/utils/examples/testAgenticRAG.js",
+        "test:integration": "node src/utils/examples/integrationExample.js",
+        "health": "curl http://localhost:3000/health",
+        "docs": "curl http://localhost:3000/docs",
+        "docs:view": "echo 'Opening documentation...' && open docs/RAG-Architecture-Guide.md || xdg-open docs/RAG-Architecture-Guide.md",
+        "docs:tech": "echo 'Opening technical guide...' && open docs/Technical-Implementation-Guide.md || xdg-open docs/Technical-Implementation-Guide.md"
+    },
+    "dependencies": {
+        "@azure/search-documents": "^12.1.0",
+        "@langchain/core": "^0.3.33",
+        "@langchain/langgraph": "^0.2.74",
+        "@langchain/openai": "^0.3.11",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.0",
+        "express": "^4.19.0",
+        "helmet": "^7.1.0",
+        "node-fetch": "^3.3.2",
+        "openai": "^4.20.1",
+        "uuid": "^9.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.0"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+        "npm": ">=8.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/your-username/agentic-rag-poc"
+    },
+    "author": "Your Name",
+    "license": "MIT",
+    "description": "Production-ready Agentic RAG system with intelligent decision making, dual agent architecture, and comprehensive monitoring",
+    "keywords": [
+        "agentic-rag",
+        "langgraph",
+        "azure-openai",
+        "azure-search", 
+        "langchain",
+        "ai",
+        "retrieval-augmentation",
+        "gpt-4",
+        "semantic-search"
+    ],
+    "homepage": "https://github.com/your-username/agentic-rag-poc#readme",
+    "bugs": {
+        "url": "https://github.com/your-username/agentic-rag-poc/issues"
+    }
+}
