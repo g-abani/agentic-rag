@@ -6,8 +6,14 @@
     "scripts": {
         "start": "node src/index.js",
         "dev": "node --watch src/index.js",
-        "test": "node src/utils/examples/testAgenticRAG.js",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage",
+        "test:unit": "jest tests/ --testPathIgnorePatterns=e2e",
+        "test:e2e": "jest tests/marketingAgent.e2e.test.ts",
+        "test:e2e:real": "jest tests/marketingAgent.e2e.test.ts --testNamePattern='Real API'",
         "test:integration": "node src/utils/examples/integrationExample.js",
+        "test:legacy": "node src/utils/examples/testAgenticRAG.js",
         "health": "curl http://localhost:3000/health",
         "docs": "curl http://localhost:3000/docs",
         "docs:view": "echo 'Opening documentation...' && open docs/RAG-Architecture-Guide.md || xdg-open docs/RAG-Architecture-Guide.md",
@@ -22,12 +28,18 @@
         "dotenv": "^16.4.0",
         "express": "^4.19.0",
         "helmet": "^7.1.0",
+        "langsmith": "^0.3.66",
         "node-fetch": "^3.3.2",
         "openai": "^4.20.1",
         "uuid": "^9.0.1"
     },
     "devDependencies": {
-        "@types/node": "^20.10.0"
+        "@jest/globals": "^30.1.2",
+        "@types/jest": "^30.0.0",
+        "@types/node": "^20.10.0",
+        "jest": "^30.1.2",
+        "ts-jest": "^29.4.1",
+        "tsx": "^4.20.5"
     },
     "engines": {
         "node": ">=18.0.0",
@@ -44,7 +56,7 @@
         "agentic-rag",
         "langgraph",
         "azure-openai",
-        "azure-search", 
+        "azure-search",
         "langchain",
         "ai",
         "retrieval-augmentation",
